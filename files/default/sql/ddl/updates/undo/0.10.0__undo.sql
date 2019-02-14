@@ -27,6 +27,7 @@ ALTER TABLE `jupyter_settings` ADD COLUMN `files` varchar(1500) COLLATE latin1_g
 ALTER TABLE `jupyter_settings` ADD COLUMN `py_files` varchar(1500) COLLATE latin1_general_cs DEFAULT '';
 ALTER TABLE `jupyter_settings` ADD COLUMN `spark_params` varchar(6500) COLLATE latin1_general_cs DEFAULT '';
 ALTER TABLE `jupyter_settings` ADD COLUMN `fault_tolerant` tinyint(1) NOT NULL;
-
+ALTER TABLE `jupyter_settings` ADD COLUMN `log_level` varchar(32) COLLATE latin1_general_cs DEFAULT 'INFO';
+ALTER TABLE `jupyter_settings` ADD COLUMN `umask` varchar(32) COLLATE latin1_general_cs DEFAULT '022';
 ALTER TABLE `jupyter_settings` DROP COLUMN `base_dir`;
 ALTER TABLE `jupyter_settings` DROP COLUMN `json_config`;

@@ -20,6 +20,7 @@ ALTER TABLE `jupyter_settings` DROP COLUMN `files`;
 ALTER TABLE `jupyter_settings` DROP COLUMN `py_files`;
 ALTER TABLE `jupyter_settings` DROP COLUMN `spark_params`;
 ALTER TABLE `jupyter_settings` DROP COLUMN `fault_tolerant`;
-
+ALTER TABLE `jupyter_settings` DROP COLUMN `umask`;
+ALTER TABLE `jupyter_settings` DROP COLUMN `log_level`;
 ALTER TABLE `jupyter_settings` ADD COLUMN `base_dir` VARCHAR(255) DEFAULT '/Jupyter/';
 ALTER TABLE `jupyter_settings` ADD COLUMN `json_config` TEXT NOT NULL;
