@@ -618,8 +618,6 @@ CREATE TABLE `jupyter_settings` (
   `project_id` int(11) NOT NULL,
   `team_member` varchar(150) COLLATE latin1_general_cs NOT NULL,
   `secret` varchar(255) COLLATE latin1_general_cs NOT NULL,
-  `log_level` varchar(32) COLLATE latin1_general_cs DEFAULT 'INFO',
-  `umask` varchar(32) COLLATE latin1_general_cs DEFAULT '022',
   `advanced` tinyint(1) DEFAULT '0',
   `shutdown_level` int(11) NOT NULL DEFAULT '6',
   `base_dir` varchar(255) COLLATE latin1_general_cs DEFAULT '/Jupyter/',
