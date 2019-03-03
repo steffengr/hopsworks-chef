@@ -54,7 +54,11 @@ recipe  "hopsworks::delaregister", "Register dela on current vm - mainly for dem
 #######################################################################################
 
 attribute "hopsworks/default/private_ips",
-          :description => "ip addrs",
+          :description => "private ip addrs",
+          :type => 'array'
+
+attribute "hopsworks/default/public_ips",
+          :description => "public ip addrs",
           :type => 'array'
 
 attribute "hopsworks/email",

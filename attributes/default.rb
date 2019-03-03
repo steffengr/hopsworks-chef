@@ -1,3 +1,4 @@
+# coding: utf-8
 include_attribute "conda"
 include_attribute "kagent"
 include_attribute "ndb"
@@ -355,5 +356,9 @@ default['hopsworks']['expat_dir']                    = "#{node['install']['dir']
 #
 default['hopsworks']['featurestore_default_storage_format']   = "ORC"
 
-default['scala']['version']                   = "2.11.8"
-default['scala']['download_url']              = "#{node['download_url']}/scala-#{node['scala']['version']}.rpm"
+default['scala']['version']                          = "2.11.8"
+default['scala']['download_url']                     = "#{node['download_url']}/scala-#{node['scala']['version']}.rpm"
+
+
+default["hopsworks"][:default][:public_ips]          = node["install"]["public_ips"].empty? ? ['10.0.2.15'] : node["install"]["public_ips"]  
+default["hopsworks"][:default][:private_ips]         = node["install"]["private_ips"].empty? ? ['10.0.2.15'] : node["install"]["private_ips"]

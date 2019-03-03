@@ -79,7 +79,7 @@ rescue
 end
 
 begin
-  logstash_ip = private_recipe_ip("hopslog","default")
+  logstash_ip = private_recipe_ip("hopslog","logstash")
 rescue
   logstash_ip = node['hostname']
   Chef::Log.warn "could not find the Logstash ip!"
@@ -135,7 +135,7 @@ rescue
 end
 
 begin
-  kibana_ip = private_recipe_ip("hopslog","default")
+  kibana_ip = private_recipe_ip("hopslog","kibana")
 rescue
   kibana_ip = node['hostname']
   Chef::Log.warn "could not find the logstash server ip!"
