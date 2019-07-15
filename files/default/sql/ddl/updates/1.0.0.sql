@@ -139,10 +139,11 @@ ALTER TABLE `hopsworks`.`feature_store_feature` ADD CONSTRAINT `on_demand_featur
 ALTER TABLE `hopsworks`.`feature_group` ADD COLUMN `feature_group_type` INT(11) NOT NULL DEFAULT '0';
 ALTER TABLE `hopsworks`.`feature_group` ADD COLUMN `on_demand_feature_group_id` INT(11) NULL;
 ALTER TABLE `hopsworks`.`feature_group` ADD CONSTRAINT `on_demand_feature_group_fk`
-                                                FOREIGN KEY (`on_demand_feature_group_id`) REFERENCES
+                                               FOREIGN KEY (`on_demand_feature_group_id`) REFERENCES
                                                `hopsworks`.`on_demand_feature_group`(`id`)
                                                ON DELETE CASCADE
                                                ON UPDATE NO ACTION;
+
 ALTER TABLE `hopsworks`.`feature_group` ADD COLUMN `cached_feature_group_id` INT(11) NULL;
 ALTER TABLE `hopsworks`.`feature_group` ADD CONSTRAINT `cached_feature_group_fk`
                                                 FOREIGN KEY (`cached_feature_group_id`) REFERENCES
