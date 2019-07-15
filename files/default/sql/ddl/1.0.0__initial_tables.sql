@@ -1841,6 +1841,3 @@ ALTER TABLE `hopsworks`.`feature_store_feature` ADD CONSTRAINT `on_demand_featur
                                                ON UPDATE NO ACTION;
 
 ALTER TABLE `hopsworks`.`feature_group` ADD COLUMN `feature_group_type` INT(11) NOT NULL DEFAULT '0';
-ALTER TABLE `hopsworks`.`feature_store` ADD INDEX `project_idx` (`project_id`)
-ALTER TABLE `hopsworks`.`feature_group` ADD INDEX `feature_store_idx` (`feature_store_id`)
-ALTER TABLE `hopsworks`.`training_dataset` ADD INDEX `feature_store_idx` (`feature_store_id`)

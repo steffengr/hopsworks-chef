@@ -150,10 +150,6 @@ ALTER TABLE `hopsworks`.`feature_group` ADD CONSTRAINT `cached_feature_group_fk`
                                                ON DELETE CASCADE
                                                ON UPDATE NO ACTION;
 
-ALTER TABLE `hopsworks`.`feature_store` ADD INDEX `project_idx` (`project_id`);
-ALTER TABLE `hopsworks`.`feature_group` ADD INDEX `feature_store_idx` (`feature_store_id`);
-ALTER TABLE `hopsworks`.`training_dataset` ADD INDEX `feature_store_idx` (`feature_store_id`);
-
 ALTER TABLE `hopsworks`.`training_dataset` ADD COLUMN `hopsfs_training_dataset_id` INT(11) NULL;
 ALTER TABLE `hopsworks`.`training_dataset` ADD CONSTRAINT `hopsfs_training_dataset_fk`
                                                 FOREIGN KEY (`hopsfs_training_dataset_id`) REFERENCES
