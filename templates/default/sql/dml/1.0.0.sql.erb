@@ -32,3 +32,5 @@ DELETE FROM `hopsworks`.`variables` WHERE `id`="service_stop_script";
 
 DELETE FROM `hopsworks`.`variables` where id="telegraf";
 DELETE FROM `hopsworks`.`variables` where id="kapacitor";
+
+REPLACE INTO `hopsworks`.`variables` VALUES ("featurestore_aws_access_keys_enabled", "<%= node['hopsworks']['featurestore_aws_access_keys_enabled'] %>");

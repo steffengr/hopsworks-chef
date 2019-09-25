@@ -1901,6 +1901,10 @@ attribute "hopsworks/featurestore_default_storage_format",
           :description => "Default storage format for the hive database of the feature stores (ORC/PARQUET)",
           :type => 'string'
 
+attribute "hopsworks/featurestore_aws_access_keys_enabled",
+          :description => "Whether to allow configuring AWS access keys for the S3 connector. (default 'true')",
+          :type => 'string'
+
 # Glassfish Http Configuration
 attribute "glassfish/http/keep_alive_timeout",
           :description => "Glassfish http listeners Keep alive timeout seconds",
